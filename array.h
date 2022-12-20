@@ -7,7 +7,7 @@
 //--------------------------------------
 
 // Basic type representing a pointer to some
-// data and the size of the data. `__restrict__`
+// data and the size of the data. `__restrict`
 // here is used to indicate the data should not
 // alias against any other input parameters and 
 // can sometimes produce important performance
@@ -16,7 +16,7 @@ template<typename T>
 struct slice1d
 {
     int size;
-    T* __restrict__ data;
+    T* __restrict data;
     
     slice1d(int _size, T* _data) : size(_size), data(_data) {}
     
@@ -31,7 +31,7 @@ template<typename T>
 struct slice2d
 {
     int rows, cols;
-    T* __restrict__ data;
+    T* __restrict data;
     
     slice2d(int _rows, int _cols, T* _data) : rows(_rows), cols(_cols), data(_data) {}
 
